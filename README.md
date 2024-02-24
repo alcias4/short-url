@@ -5,7 +5,7 @@
 # Skill
 
 <ul>
-  <li>TypeScript<li>
-  <li>Tailwind CSS<li>
-  <li>Next.js<li>
+  <li>TypeScript</li>
+  <li>Tailwind CSS</li>
+  <li>Next.js</li>
 </ul>
