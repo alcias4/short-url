@@ -1,4 +1,4 @@
-
+"use client"
 import apiUrl from "@/service/api";
 import { useEffect, useState } from "react";
 
@@ -10,19 +10,19 @@ interface d {
 }
 
 const useData = () => {
- 
+
   const [long, setLongUrl]= useState('')
   const [shortUrl, setUrl] = useState('')
-  const [dat, setData] = useState<d[]>(()=> {
-    if(!localStorage.getItem("url") ) {
-      localStorage.setItem("url", "")
-      return []
-    } else {
-      const n  = window.localStorage.getItem("url")|| "[]"
+  const [dat, setData] = useState<d[]>([]);
 
-      return JSON.parse(n)
+  useEffect(() => {
+    if(typeof window !== undefined ){
+      if(window.localStorage.getItem("url") === null) {
+        window.localStorage.setItem("url", "[]")
+      }
+      setData(JSON.parse(window.localStorage.getItem("url") || "[]"))
     }
-  });
+  },[])
 
   useEffect(()=> {
     if(long !== ""){

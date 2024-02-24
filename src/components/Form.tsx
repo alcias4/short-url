@@ -19,7 +19,7 @@ function Form() {
       </form>
       <ul className="mt-20 flex flex-col items-center w-full gap-5 lp:mt-10 desk:w-[900px]">
         {dat?.map((e,i) => (
-          <li key={i} className="flex flex-col gap-5 w-full rounded-xl bg-white p-4 divide-y-2 lp:flex-row lp:divide-y-0 lp:items-center lp:text-sm">
+          <li key={i + '332-423'} className="flex flex-col gap-5 w-full rounded-xl bg-white p-4 divide-y-2 lp:flex-row lp:divide-y-0 lp:items-center lp:text-sm">
             <p className="truncate px-2 pt-2 lp:w-[50%] lp:p-0">{e.url}</p>
             <p className="truncate pt-4 px-2 text-teal-btn lp:w-[35%] lp:p-0" id={`${i}`}>{e.short}</p>
             <button className="w-full bg-teal-btn p-4 rounded-lg text-white hover:opacity-50 lp:w-[15%]" onClick={()=>handleCopy(`${i}`)}>copy</button>
