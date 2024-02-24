@@ -65,7 +65,7 @@ const useData = () => {
     }
   }
 
-  return { handleClick, dat, setLongUrl, handleCopy }
+  return { handleClick, dat, setLongUrl, handleCopy,  long }
 }
 
 export default useData;
