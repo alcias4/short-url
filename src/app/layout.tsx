@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Header";
 import Header from "@/components/Header";
+import BtnFinal from "@/components/BtnFinal";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({ 
   weight: ["100","200","300", "400","500", "600", "700","800","900"],
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body className={poppins.className}>
-        <main className="w-full pb-10">
+        <main className="w-full h-full bg-background flex flex-col items-center">
           <Header />
           {children}
+          <BtnFinal />
+          <Footer /> 
         </main>
       </body>
     </html>
